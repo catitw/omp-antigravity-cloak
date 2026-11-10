@@ -1,5 +1,5 @@
 {
-  "name": "omp-cloak",
+  "name": "omp-antigravity-cloak",
   "version": "0.1.0",
   "description": "Cloak OMP and agent system prompt fingerprints in Magpie onRequest",
   "type": "module",
@@ -9,7 +9,7 @@
   },
   "keywords": ["magpie", "middleware", "omp", "antigravity"],
   "magpie": {
-    "middleware": "./omp-cloak.middleware.js",
+    "middleware": "./omp-antigravity-cloak.middleware.js",
     "options": {
       "extraWords": [],
       "off": false
