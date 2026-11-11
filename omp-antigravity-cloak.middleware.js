@@ -8,6 +8,9 @@ export const words = [
   "Claude Agent SDK",
   "Claude Code",
   "Anthropic's official CLI",
+  "You are Codex, an agent based on GPT-5",
+  "You are Codex, a coding agent based on GPT-5",
+  "Hermes Agent, an intelligent AI assistant created by Nous Research",
 ]
 
 const zwsp = "​"
@@ -69,8 +72,12 @@ function cloaker(list) {
     seen.add(k)
     res.push(new RegExp(w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi"))
   }
+  const two = (m) => {
+    const out = m.replace(/[A-Za-z0-9]{3,}/g, (w) => w[0] + zwsp + w[1] + zwsp + w.slice(2))
+    return out !== m ? out : m[0] + zwsp + m.slice(1)
+  }
   return (s) => {
-    for (const re of res) s = s.replace(re, (m) => m[0] + zwsp + m.slice(1))
+    for (const re of res) s = s.replace(re, two)
     return s
   }
 }

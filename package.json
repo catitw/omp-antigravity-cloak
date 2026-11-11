@@ -1,6 +1,6 @@
 {
   "name": "omp-antigravity-cloak",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cloak OMP and agent system prompt fingerprints in Magpie onRequest",
   "type": "module",
   "license": "MIT",
